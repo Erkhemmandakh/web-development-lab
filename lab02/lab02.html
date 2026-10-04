@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Лаборатори 02: Хэрэглэгчийн анкет</title>
+    <title>Лаборатори 02: Программистын Анкет</title>
 </head>
 <body>
     <!-- Вэбийн толгой хэсэг -->
     <header>
-        <h1>Оюутны Бүртгэлийн Портал</h1>
+        <h1>IT Хөгжүүлэгчийн Бүртгэлийн Систем</h1>
         <!-- Навигацийн цэс -->
         <nav>
             <ul>
-                <li><a href="../index.html">Нүүр</a></li>
+                <li><a href="../index.html">Үндсэн нүүр</a></li>
                 <li><a href="#">Анкет засах</a></li>
-                <li><a href="#">Тусламж</a></li>
+                <li><a href="#">Зааварчилгаа</a></li>
             </ul>
         </nav>
     </header>
@@ -23,28 +23,28 @@
     <main>
         <article>
             <section>
-                <h2>Хэрэглэгчийн Анкет Бөглөх</h2>
-                <p>Доорх формын дагуу мэдээллээ бүрэн, үнэн зөв зааж бөглөнө үү.</p>
+                <h2>Хөгжүүлэгчийн бүртгэлийн анкет</h2>
+                <p>Та доорх формоор дамжуулан системд бүртгүүлж, профайл мэдээллээ баталгаажуулна уу.</p>
 
                 <!-- Форм хэсэг -->
                 <form action="#" method="POST" enctype="multipart/form-data">
-                    <!-- 1-р бүлэг: Хувийн мэдээлэл -->
+                    <!-- 1-р бүлэг: Хувийн ба Харилцах мэдээлэл -->
                     <fieldset>
-                        <legend>Хувийн мэдээлэл</legend>
+                        <legend>Хувийн ба Харилцах мэдээлэл</legend>
                         
-                        <label for="fullname">Овог нэр:</label><br>
-                        <input type="text" id="fullname" name="fullname" placeholder="Н. Болдбаатар" required minlength="2"><br><br>
+                        <label for="fullname">Овог болон нэр:</label><br>
+                        <input type="text" id="fullname" name="fullname" placeholder="Б. Бат-Эрдэнэ" required minlength="2"><br><br>
 
-                        <label for="email">Цахим хаяг (Email):</label><br>
-                        <input type="email" id="email" name="email" placeholder="example@domain.com" required><br><br>
+                        <label for="email">Цахим мэйл хаяг:</label><br>
+                        <input type="email" id="email" name="email" placeholder="bat.erdene@dev.mn" required><br><br>
 
-                        <label for="password">Нууц үг:</label><br>
+                        <label for="password">Системийн нууц үг:</label><br>
                         <input type="password" id="password" name="password" required minlength="6"><br><br>
 
-                        <label for="phone">Утасны дугаар:</label><br>
-                        <input type="tel" id="phone" name="phone" pattern="[0-9]{8}" placeholder="881112233" required><br><br>
+                        <label for="phone">Холбоо барих утас:</label><br>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{8}" placeholder="99112233" required><br><br>
 
-                        <label for="dob">Төрсөн огноо:</label><br>
+                        <label for="dob">Төрсөн сар, өдөр:</label><br>
                         <input type="date" id="dob" name="dob" required><br><br>
 
                         <label>Хүйс:</label><br>
@@ -55,37 +55,37 @@
                     </fieldset>
                     <br>
 
-                    <!-- 2-р бүлэг: Мэргэжил ба Сургалтын мэдээлэл -->
+                    <!-- 2-р бүлэг: Мэргэжил ба Технологийн ур чадвар -->
                     <fieldset>
-                        <legend>Боловсрол ба Сонирхол</legend>
+                        <legend>Мэргэжил ба Сонгосон чиглэл</legend>
 
-                        <label for="degree">Суралцаж буй түвшин:</label><br>
+                        <label for="degree">Боловсролын зэрэг:</label><br>
                         <select id="degree" name="degree" required>
-                            <option value="">-- Сонгоно уу --</option>
+                            <option value="">-- Түвшин сонгоно уу --</option>
                             <option value="bachelor">Бакалавр</option>
                             <option value="master">Магистр</option>
                             <option value="doctor">Докторант</option>
                         </select><br><br>
 
-                        <label>Сонирхож буй технологиуд:</label><br>
+                        <label>Эзэмшсэн программчлалын хэлнүүд:</label><br>
                         <input type="checkbox" id="html" name="skills" value="HTML">
-                        <label for="html">HTML5/CSS3</label><br>
+                        <label for="html">HTML5 & CSS3</label><br>
                         <input type="checkbox" id="js" name="skills" value="JavaScript">
-                        <label for="js">JavaScript</label><br>
+                        <label for="js">JavaScript (React/Node)</label><br>
                         <input type="checkbox" id="php" name="skills" value="PHP">
                         <label for="php">PHP & MySQL</label><br><br>
 
-                        <label for="avatar">Профайл зураг оруулна уу: </label><br>
+                        <label for="avatar">Зээлийн / Нүүр зураг оруулна уу:</label><br>
                         <input type="file" id="avatar" name="avatar" accept="image/*"><br><br>
 
-                        <label for="bio">Товч танилцуулга / Өөрийн тухай:</label><br>
-                        <textarea id="bio" name="bio" rows="4" cols="50" placeholder="Өөрийн танилцуулгыг энд бичнэ ..."></textarea><br>
+                        <label for="bio">Өөрийн туршлага / Товч танилцуулга:</label><br>
+                        <textarea id="bio" name="bio" rows="4" cols="50" placeholder="Өөрийн бүтээсэн төсөл эсвэл ажлын туршлагаа бичнэ үү..."></textarea><br>
                     </fieldset>
                     <br>
 
                     <!-- Илгээх ба Арилгах товчлуурууд -->
-                    <button type="submit">Анкет Илгээх</button>
-                    <button type="reset">Дахин эхлүүлэх</button>
+                    <button type="submit">Мэдээлэл Хадгалах</button>
+                    <button type="reset">Маягт Арилгах</button>
                 </form>
             </section>
         </article>
@@ -94,9 +94,9 @@
         <section>
             <h2>Миний сонирхол</h2>
             <ul>
-                <li>Веб хөгжүүлэлт</li>
-                <li>Фото зураг авах</li>
-                <li>Кино үзэх</li>
+                <li>Фронтенд хөгжүүлэлт ба UX/UI Дизайн</li>
+                <li>Нээлттэй эхийн (Open Source) кодод хувь нэмэр оруулах</li>
+                <li>Технологийн ном, нийтлэл унших</li>
             </ul>
         </section>
 
@@ -113,15 +113,15 @@
                 <tbody>
                     <tr>
                         <td>Веб зохиомж</td>
-                        <td>95</td>
+                        <td>98</td>
                     </tr>
                     <tr>
                         <td>Мэдээллийн сан</td>
-                        <td>88</td>
+                        <td>90</td>
                     </tr>
                     <tr>
                         <td>Алгоритм</td>
-                        <td>92</td>
+                        <td>95</td>
                     </tr>
                 </tbody>
             </table>
@@ -130,7 +130,7 @@
 
     <!-- Хөл хэсэг -->
     <footer>
-        <p>&copy; 2026 Веб зохиомж хичээл. Бүх эрх хуулиар хамгаалагдсан.</p>
+        <p>&copy; 2026 Программист Хөгжүүлэгчийн Портал. Бүх эрх хуулиар хамгаалагдсан.</p>
     </footer>
 </body>
 </html>
