@@ -1,0 +1,319 @@
+/* ==========================================================================
+   1. ҮНДСЭН ТОХИРГОО ЖИШИГ ӨНГӨ, ФОНТ (Google Fonts)
+   ========================================================================== */
+:root {
+    --primary-color: #3b82f6;      /* Үндсэн цэнхэр өнгө */
+    --primary-hover: #2563eb;      /* Товчлуурын hover өнгө */
+    --secondary-color: #64748b;    /* Вторник саарал өнгө */
+    --secondary-hover: #475569;
+    --bg-color: #f8fafc;           /* Дэвсгэр өнгө */
+    --card-bg: #ffffff;            /* Карт / Формын дэвсгэр өнгө */
+    --text-color: #1e293b;          /* Үндсэн текстийн өнгө */
+    --text-muted: #64748b;         /* Туслах текстийн өнгө */
+    --border-color: #cbd5e1;       /* Хүрээний өнгө */
+    --accent-color: #ef4444;       /* Badge / Онцлох өнгө */
+    
+    --font-main: 'Roboto', sans-serif;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Бүх элементийн Box-Sizing тохируулга */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding-bottom: 40px;
+}
+
+/* ==========================================================================
+   2. HEADER & NAVIGATION ZAGVAR
+   ========================================================================== */
+.main-header {
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+    padding: 20px 0;
+    margin-bottom: 30px;
+    box-shadow: var(--box-shadow);
+}
+
+.header-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Position: relative/absolute ашигласан Badge */
+.portal-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    position: relative; /* Badge байрлуулах эцэг элемент */
+    display: inline-block;
+}
+
+.badge {
+    position: absolute;
+    top: -10px;
+    right: -60px;
+    background-color: var(--accent-color);
+    color: white;
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-color);
+    background-color: #eff6ff;
+}
+
+/* ==========================================================================
+   3. MAIN CONTENT & CARDS (Box Model)
+   ========================================================================== */
+.main-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.form-card, .info-card {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 25px;
+    border: 1px solid var(--border-color);
+}
+
+.section-title {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.section-subtitle {
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   4. FORM ELEMENTS & INPUTS (Class Сонгогч & Box Model)
+   ========================================================================== */
+.form-group {
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.group-legend {
+    font-weight: 700;
+    color: var(--primary-color);
+    padding: 0 10px;
+}
+
+.input-wrapper {
+    margin-bottom: 18px;
+}
+
+.form-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+}
+
+/* Оролтын талбаруудыг "амьсгалуулах" (Padding, Border, Border-Radius) */
+.form-input, .form-select, .form-textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-family: var(--font-main);
+    font-size: 0.95rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.radio-group, .checkbox-group {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 5px;
+}
+
+.radio-label, .checkbox-label {
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.form-file {
+    padding: 5px 0;
+}
+
+/* Position: relative/absolute ашигласан Tooltip */
+.tooltip-container {
+    position: relative;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    opacity: 0;
+    width: 240px;
+    background-color: var(--text-color);
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 6px 10px;
+    font-size: 0.8rem;
+    
+    /* Absolute байршил */
+    position: absolute;
+    z-index: 10;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 8px;
+    
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Tooltip су сум */
+.tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--text-color) transparent transparent transparent;
+}
+
+.tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* ==========================================================================
+   5. BUTTONS (Товчнуудын загварчлал)
+   ========================================================================== */
+.button-group {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: var(--border-radius);
+    font-family: var(--font-main);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: var(--secondary-hover);
+}
+
+/* ==========================================================================
+   6. LIST & TABLE (Жагсаалт ба Хүснэгтийн загвар)
+   ========================================================================== */
+.interest-list {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.interest-item {
+    margin-bottom: 8px;
+    color: var(--text-color);
+}
+
+.grades-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.grades-table th, .grades-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.grades-table th {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.grades-table tbody tr:hover {
+    background-color: #f1f5f9;
+}
+
+/* ==========================================================================
+   7. FOOTER
+   ========================================================================== */
+.main-footer {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-top: 20px;
+}
