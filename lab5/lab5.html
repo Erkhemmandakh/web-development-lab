@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лаборатори 05: Responsive вэб хуудас</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Оюутны бүртгэлийн хуудас</div>
+
+        <nav class="navbar" aria-label="Үндсэн цэс">
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger" aria-label="Цэс нээх">&#9776;</label>
+
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Нүүр</a></li>
+                <li><a href="#form-section" class="nav-link active">Анкет</a></li>
+                <li><a href="#grades-section" class="nav-link">Дүнгийн мэдээлэл</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Цэс</h3>
+            <ul class="sidebar-menu">
+                <li><a href="#form-section">Хувийн анкет</a></li>
+                <li><a href="#grades-section">Дүнгийн мэдээлэл</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <section id="form-section" class="card-section">
+                <h2>Хэрэглэгчийн анкет бөглөх</h2>
+                <p class="subtitle">Доорх формын дагуу мэдээллээ бүрэн, үнэн зөв бөглөнө үү.</p>
+
+                <form action="#" method="POST" enctype="multipart/form-data" class="registration-form">
+
+                    <fieldset class="form-group">
+                        <legend>Хувийн мэдээлэл</legend>
+
+                        <div class="form-row">
+                            <label for="fullname">Овог нэр:</label>
+                            <input type="text" id="fullname" name="fullname" placeholder="Н. Болдбаатар" required minlength="2">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="email">Цахим хаяг (Email):</label>
+                            <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+                        </div>
+
+                        <div class="form-row">
+                            <label for="password">Нууц үг:</label>
+                            <input type="password" id="password" name="password" required minlength="6">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="phone">Утасны дугаар:</label>
+                            <input type="tel" id="phone" name="phone" pattern="[0-9]{8}" placeholder="88111122" required>
+                        </div>
+
+                        <div class="form-row">
+                            <label for="dob">Төрсөн огноо:</label>
+                            <input type="date" id="dob" name="dob" required>
+                        </div>
+
+                        <div class="form-row">
+                            <span class="field-label">Хүйс:</span>
+                            <div class="radio-options">
+                                <label><input type="radio" name="gender" value="male"> Эрэгтэй</label>
+                                <label><input type="radio" name="gender" value="female"> Эмэгтэй</label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-group">
+                        <legend>Боловсрол ба сонирхол</legend>
+
+                        <div class="form-row">
+                            <label for="degree">Суралцаж буй түвшин:</label>
+                            <select id="degree" name="degree" required>
+                                <option value="">-- Сонгоно уу --</option>
+                                <option value="bachelor">Бакалавр</option>
+                                <option value="master">Магистр</option>
+                                <option value="doctor">Докторант</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <span class="field-label">Сонирхож буй технологиуд:</span>
+                            <div class="checkbox-options">
+                                <label><input type="checkbox" name="skills" value="HTML"> HTML5/CSS3</label>
+                                <label><input type="checkbox" name="skills" value="JavaScript"> JavaScript</label>
+                                <label><input type="checkbox" name="skills" value="PHP"> PHP &amp; MySQL</label>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <label for="avatar">Профайл зураг:</label>
+                            <input type="file" id="avatar" name="avatar" accept="image/*">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="bio">Товч танилцуулга:</label>
+                            <textarea id="bio" name="bio" rows="4" placeholder="Өөрийнхөө тухай энд бичнэ үү..."></textarea>
+                        </div>
+                    </fieldset>
+
+                    <div class="button-row">
+                        <button type="submit" class="btn btn-submit">Анкет илгээх</button>
+                        <button type="reset" class="btn btn-reset">Дахин эхлүүлэх</button>
+                    </div>
+                </form>
+            </section>
+
+            <section id="grades-section" class="card-section">
+                <h2>Дүнгийн мэдээлэл</h2>
+                <p class="subtitle">Сүүлийн семестрийн хичээлүүдийн сурлагын дүнгүүд болон голч онооны жагсаалт.</p>
+                <div class="table-wrapper">
+                    <table class="grades-table">
+                        <thead>
+                            <tr>
+                                <th>Хичээлийн нэр</th>
+                                <th>Кредит</th>
+                                <th>Үсгэн дүн</th>
+                                <th>Оноо</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Веб зохиомж</td>
+                                <td>3</td>
+                                <td>A</td>
+                                <td>95</td>
+                            </tr>
+                            <tr>
+                                <td>Өгөгдлийн сан</td>
+                                <td>3</td>
+                                <td>B+</td>
+                                <td>88</td>
+                            </tr>
+                            <tr>
+                                <td>Алгоритм ба өгөгдлийн бүтэц</td>
+                                <td>3</td>
+                                <td>A-</td>
+                                <td>92</td>
+                            </tr>
+                            <tr>
+                                <td>Программчлалын үндэс</td>
+                                <td>3</td>
+                                <td>A</td>
+                                <td>96</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 Веб зохиомж хичээл. Бүх эрх хуулиар хамгаалагдсан.</p>
+    </footer>
+
+</body>
+</html>
